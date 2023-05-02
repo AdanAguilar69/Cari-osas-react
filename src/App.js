@@ -7,7 +7,7 @@ import "./App.css";
 
 const Input = (props) => {
 
-  const { id, placeholder, name, label, type = "text" } = { ...props };
+  const { id, placeholder, name, label, type = "text", onchange } = { ...props };
   return (
     <div className="col-lg-5" key={id}>
       <label htmlFor={id} className="form-label">
@@ -19,6 +19,7 @@ const Input = (props) => {
         className="form-control"
         id={id}
         placeholder={placeholder}
+        onChange={(e)=> onchange(e)}
         required
       />
       <div className="valid-feedback">¡correcto! 😻</div>
@@ -150,7 +151,7 @@ function App() {
 
     let form = event.target
 
-    
+    console.log(event);
         
     if (!form.checkValidity()){
         event.preventDefault()
@@ -182,8 +183,6 @@ function App() {
     //doc.addImage(ImageData, 10, 8, 106, 34);
 
     doc.setFontSize(14);
-
-    doc.setFontType("bold");
 
     doc.setTextColor(22, 225, 255);
 
@@ -243,6 +242,7 @@ function App() {
                 className="needs-validation mt-5"
                 action="https://formsubmit.co/elvin.arana27@gmail.com"
                 method="POST"
+                onSubmit={(e)=> handleSubmit(e)}
                 noValidate
               >
                 <div className="row g-3">
@@ -252,6 +252,7 @@ function App() {
                         id={item.id}
                         label={item.label}
                         placeholder={item.placeholder}
+                        onchange={handleChange}
                         name={item.name}
                         type={item.type}
                         key={item.id}
@@ -261,7 +262,6 @@ function App() {
                 <button
                   type="submit"
                   className="btn btn-primary btn-lg"
-                  onClick={handleSubmit}
                 >
                   AGREGAR
                 </button>
