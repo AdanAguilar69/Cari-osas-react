@@ -29,23 +29,23 @@ const Input = (props) => {
 
 function App() {
   let links = ["facebook", "whatsapp", "Instagram", "Twitter", "TikTok"];
-  const [inputValue, setInputValue] = useState({nombrecarinosa:"", nombreartistico:"", Numerocedula:"", estadocivil:"", parejas:"", discapacidad:"", edad:"", nivelacademico:"", direccion:"", habilidades:"",capacidad:"", correo:"", orientacionsexual:"", salario:"", hijos:"", fecha:""});
+  const [inputValue, setInputValue] = useState({correocarinosa:"", correoartistico:"", Numerocedula:"", estadocivil:"", parejas:"", discapacidad:"", edad:"", nivelacademico:"", direccion:"", habilidades:"",capacidad:"", correo:"", orientacionsexual:"", salario:"", hijos:"", fecha:""});
 
   let inputsProps = [];
 
   inputsProps.push({
-    id: "nombrecarinosa",
-    placeholder: "Ingrese su nombre",
-    name: "nombrecarinosa",
-    label: "Cual es su nombre:",
-    value: inputValue.nombrecarinosa
+    id: "correocarinosa",
+    placeholder: "Ingrese su correo",
+    name: "correocarinosa",
+    label: "Cual es su correo:",
+    value: inputValue.correocarinosa
   });
   inputsProps.push({
-    id: "nombreartistico",
-    placeholder: "Cual es su nombre artistico",
-    name: "nombreartistico",
+    id: "correoartistico",
+    placeholder: "Cual es su correo artistico",
+    name: "correoartistico",
     label: "Ingrese su apodo:",
-    value: inputValue.nombreartistico
+    value: inputValue.correoartistico
   });
   inputsProps.push({
     id: "Numerocedula",
@@ -72,14 +72,14 @@ function App() {
     id: "estadocivil",
     placeholder: "Ingrese el estado civil",
     name: "estadocivil",
-    label: "Nombre del estado civil:",
+    label: "correo del estado civil:",
     value: inputValue.estadocivil
   });
   inputsProps.push({
     id: "habilidades",
     placeholder: "Cuales son sushabilidades",
     name: "habilidades",
-    label: "Nombre de las habilidades:",
+    label: "correo de las habilidades:",
     value: inputValue.habilidades
   });
   inputsProps.push({
@@ -103,7 +103,41 @@ function App() {
     label: "Nivel Academico:",
     value: inputValue.nivelacademico
   });
-
+  inputsProps.push({
+    id: "habilidades",
+    placeholder: "cuales son sus habilidades",
+    name: "habilidades",
+    label: "habilidades:",
+    value: inputValue.habilidades
+  });
+  inputsProps.push({
+    id: "capacidad",
+    placeholder: "Ingrese la capacidad en cm",
+    name: "capacidad",
+    label: "capacidad:",
+    value: inputValue.capacidad
+  });
+  inputsProps.push({
+    id: "correo",
+    placeholder: "Ingrese el correo",
+    name: "correo",
+    label: "correo:",
+    value: inputValue.correo
+  });
+  inputsProps.push({
+    id: "orientacionsexual",
+    placeholder: "Ingrese orientacionsexual",
+    name: "orientacionsexual",
+    label: "orientacionsexual:",
+    value: inputValue.orientacionsexual
+  });
+  inputsProps.push({
+    id: "hijos",
+    placeholder: "Ingrese el Numero de hijos",
+    name: "hijos",
+    label: "Numero de hijos:",
+    value: inputValue.hijos
+  });
 
   return (
   <></>
