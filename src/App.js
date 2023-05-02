@@ -93,7 +93,7 @@ function App() {
     id: "direccion",
     placeholder: "Ingrese su Direccion",
     name: "Direccion",
-    label: "Ncual es su Direccion:",
+    label: "cual es su Direccion:",
     value: inputValue.direccion
   });
   inputsProps.push({
