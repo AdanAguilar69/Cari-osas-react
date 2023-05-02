@@ -1,6 +1,4 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "bootstrap/dist/css/bootstrap.min.css";
 // Bootstrap Bundle JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
@@ -28,24 +26,87 @@ const Input = (props) => {
   );
 };
 
+
 function App() {
+  let links = ["facebook", "whatsapp", "Instagram", "Twitter", "TikTok"];
+  const [inputValue, setInputValue] = useState({nombrecarinosa:"", nombreartistico:"", Numerocedula:"", discapacidad:"", parejas:"", discapacidad:"", edad:"", nivelacademico:"", direccion:"", habilidades:"",capacidad:"", correo:"", orientacionsexual:"", salario:"", hijos:"", fecha:""});
+
+  let inputsProps = [];
+
+  inputsProps.push({
+    id: "nombrecarinosa",
+    placeholder: "Ingrese su nombre",
+    name: "nombrecarinosa",
+    label: "Cual es su nombre:",
+    value: inputValue.nombrecarinosa
+  });
+  inputsProps.push({
+    id: "nombreartistico",
+    placeholder: "Cual es su nombre artistico",
+    name: "nombreartistico",
+    label: "Ingrese su apodo:",
+    value: inputValue.nombreartistico
+  });
+  inputsProps.push({
+    id: "Numerocedula",
+    placeholder: "Ingrese Numero de cedula",
+    name: "Numerocedula",
+    label: " Numero de cedula:",
+    value: inputValue.Numerocedula
+  });
+  inputsProps.push({
+    id: "discapacidad",
+    placeholder: "Discapacidad",
+    name: "discapacidad",
+    label: "Discapacidad:",
+    value: inputValue.discapacidad
+  });
+  inputsProps.push({
+    id: "parejas",
+    placeholder: "parejass",
+    name: "parejas",
+    label: "parejas:",
+    value: inputValue.parejas
+  });
+  inputsProps.push({
+    id: "Proveedor",
+    placeholder: "Ingrese el proveedor",
+    name: "Proveedor",
+    label: "Nombre del proveedor:",
+    value: inputValue.Proveedor
+  });
+  inputsProps.push({
+    id: "Cliente",
+    placeholder: "Ingrese el cliente",
+    name: "cliente",
+    label: "Nombre del cliente:",
+    value: inputValue.Cliente
+  });
+  inputsProps.push({
+    id: "Edad",
+    placeholder: "Ingrese su Edad",
+    name: "Edad",
+    label: "Edad:",
+    value: inputValue.Edad
+  });
+  inputsProps.push({
+    id: "direccion",
+    placeholder: "Ingrese su Direccion",
+    name: "Direccion",
+    label: "Ncual es su Direccion:",
+    value: inputValue.direccion
+  });
+  inputsProps.push({
+    id: "nivelacademico",
+    placeholder: "Cual es su nivel academico",
+    name: "Nivelacademico",
+    label: "Nivel Academico:",
+    value: inputValue.nivelacademico
+  });
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <></>
   );
 }
 
