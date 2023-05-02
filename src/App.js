@@ -211,7 +211,66 @@ function App() {
 
 }
   return (
-  <></>
+  <>
+  <div className="container">
+        <header className="d-flex flex-wrap justity-content-center py-3 mb-4 border-bottom">
+          <a
+            href="#"
+            className="d-flex alingn-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"
+          >
+            <span className="fs-4"> Cariñosapremium </span>
+          </a>
+          <ul className="nav nav-pills">
+            {links &&
+              links.map((link, index) => (
+                <li className="nav-item" key={index}>
+                  <a
+                    href="https://vm.tiktok.com/ZMYKdktdY/"
+                    className="nav-link"
+                  >
+                    {link}
+                    <i className="bi-facebook"></i>
+                  </a>
+                </li>
+              ))}
+          </ul>
+        </header>
+        <div className="px-4 text-center">
+          <div className="container">
+            <main>
+              <h4 className="mb-3 mt-2">Cariñosapremium</h4>
+              <form
+                className="needs-validation mt-5"
+                action="https://formsubmit.co/elvin.arana27@gmail.com"
+                method="POST"
+                noValidate
+              >
+                <div className="row g-3">
+                  {inputsProps &&
+                    inputsProps.map((item) => (
+                      <Input
+                        id={item.id}
+                        label={item.label}
+                        placeholder={item.placeholder}
+                        name={item.name}
+                        type={item.type}
+                        key={item.id}
+                      />
+                    ))}
+                </div>
+                <button
+                  type="submit"
+                  className="btn btn-primary btn-lg"
+                  onClick={handleSubmit}
+                >
+                  AGREGAR
+                </button>
+              </form>
+            </main>
+          </div>
+        </div>
+      </div>
+  </>
   );
 }
 
