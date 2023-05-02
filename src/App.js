@@ -138,6 +138,13 @@ function App() {
     label: "Numero de hijos:",
     value: inputValue.hijos
   });
+  inputsProps.push({
+    id: "salario",
+    placeholder: "Ingrese el salario deseado",
+    name: "salario",
+    label: "salario:",
+    value: inputValue.salario
+  });
 
   return (
   <></>
