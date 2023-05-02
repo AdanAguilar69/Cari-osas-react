@@ -29,7 +29,7 @@ const Input = (props) => {
 
 function App() {
   let links = ["facebook", "whatsapp", "Instagram", "Twitter", "TikTok"];
-  const [inputValue, setInputValue] = useState({nombrecarinosa:"", nombreartistico:"", Numerocedula:"", discapacidad:"", parejas:"", discapacidad:"", edad:"", nivelacademico:"", direccion:"", habilidades:"",capacidad:"", correo:"", orientacionsexual:"", salario:"", hijos:"", fecha:""});
+  const [inputValue, setInputValue] = useState({nombrecarinosa:"", nombreartistico:"", Numerocedula:"", estadocivil:"", parejas:"", discapacidad:"", edad:"", nivelacademico:"", direccion:"", habilidades:"",capacidad:"", correo:"", orientacionsexual:"", salario:"", hijos:"", fecha:""});
 
   let inputsProps = [];
 
@@ -69,18 +69,18 @@ function App() {
     value: inputValue.parejas
   });
   inputsProps.push({
-    id: "Proveedor",
-    placeholder: "Ingrese el proveedor",
-    name: "Proveedor",
-    label: "Nombre del proveedor:",
-    value: inputValue.Proveedor
+    id: "estadocivil",
+    placeholder: "Ingrese el estado civil",
+    name: "estadocivil",
+    label: "Nombre del estado civil:",
+    value: inputValue.estadocivil
   });
   inputsProps.push({
-    id: "Cliente",
-    placeholder: "Ingrese el cliente",
-    name: "cliente",
-    label: "Nombre del cliente:",
-    value: inputValue.Cliente
+    id: "habilidades",
+    placeholder: "Cuales son sushabilidades",
+    name: "habilidades",
+    label: "Nombre de las habilidades:",
+    value: inputValue.habilidades
   });
   inputsProps.push({
     id: "Edad",
